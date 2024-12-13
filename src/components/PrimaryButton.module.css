@@ -1,0 +1,9 @@
+.mainBtn {
+    background-color: #daaa38;
+    border: 0;
+    padding: 0.6rem 1.2rem;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
