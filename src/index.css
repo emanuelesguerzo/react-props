@@ -14,39 +14,28 @@ body {
 .container {
     margin: 0 auto;
     width: 80%;
+}
+
+.row {
+    flex-wrap: wrap;
     display: flex;
-    justify-content: center;
+    gap: 30px;
 }
   
 .col {
-    width: 35%;
-    padding: 0.5rem;
+    width: calc((100% - 30px) / 2);
 }
 
 main {
-    min-height: 80vh;
+    margin-bottom: 80px;
 }
 
 /* ////////////////// */
 /*   MEDIA  QUERYS    */
 /* ////////////////// */
-/* Laptop */
-@media screen and (max-width: 1024px) {
-    .col {
-        width: 50%;
-    }
-}
-
 /* Tablet */
 @media screen and (max-width: 768px) {
     .col {
-        width: 80%;
-    }
-}
-
-/* Mobile */
-@media screen and (max-width: 425px) {
-    .col {
-        width: 95%;
+        width: 100%;
     }
 }

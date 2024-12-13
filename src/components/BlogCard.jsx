@@ -1,15 +1,22 @@
 import PrimaryButton from "./PrimaryButton";
-import style from "./BlogCard.module.css"
+import style from "./BlogCard.module.css";
 
-const BlogCard = () => {
+const BlogCard = ({title, image, content, tags}) => {
     return (
         <div className={style.card}>
             <div>
-                <img className={style.image} src="https://via.placeholder.com/600x400" alt="600 x 400" />
+                <img className={style.image} src={image} alt="600 x 400" />
             </div>
             <div className={style.content}>
-                <h5 className={style.title}>Titolo del Post</h5>
-                <p className={style.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. A cumque rem exercitationem nisi dolorum ratione veritatis, aspernatur quis! Eum architecto voluptate rerum suscipit corrupti reprehenderit saepe repellat fuga ut tempora?</p>
+                <h5 className={style.title}>{title}</h5>
+                <div className={style.tags}>
+                    {tags.map((curTag, index) => (
+                        <span key={index} className={style.tag}>
+                            {curTag}
+                        </span>
+                    ))}
+                </div>
+                <p className={style.description}>{content}</p>
                 <PrimaryButton />
             </div>
         </div>
