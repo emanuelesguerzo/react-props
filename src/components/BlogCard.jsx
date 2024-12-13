@@ -9,9 +9,9 @@ const BlogCard = ({title, image, content, tags}) => {
             </div>
             <div className={style.content}>
                 <h5 className={style.title}>{title}</h5>
-                <div className={style.tags}>
+                <div className="tag">
                     {tags.map((curTag, index) => (
-                        <span key={index} className={`${style.tag} ${style[`tag-${curTag}`]}`}>
+                        <span key={index} className={`tag tag-${curTag}`}>
                             {curTag}
                         </span>
                     ))}
